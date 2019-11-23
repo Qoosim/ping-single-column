@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+/*Layout*/
+
+--mobile: 375px;
+--desktop: 1440px;
+
+/*colors*/
+
+--primary-color-blue: hsl(223, 87%, 63%);
+--secondary-color-blue: hsl(223, 100%, 88%);
+--secondary-color-light: hsl(354, 100%, 66%);
+--neutral-color-gray: hsl(0, 0%, 59%);
+--neutral-color-dark-blue: hsl(209, 33%, 12%); 
+
+
+/*Typography*/
+
+--font-size: 20px;
+--font-family: 'Libre Franklin', sans-serif;
+
+
+}
