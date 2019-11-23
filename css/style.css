@@ -26,6 +26,63 @@
 
 --font-size: 20px;
 --font-family: 'Libre Franklin', sans-serif;
+--font-weight-light: 300;
+--font-weight-semi-bold: 600;
+--font-weight-bold: 700;
 
+}
 
+.title {
+  font-size: calc(var(--font-size) + 5px);
+  color: var(--neutral-color-dark-blue);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  margin: 50px 0;
+}
+
+.dot {
+  color: var(--primary-color-blue);
+}
+
+.sub-title {
+  font-size: calc(var(--font-size) + 3px);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--neutral-color-gray);
+  text-align: center;
+}
+
+.soon {
+  color: var(--neutral-color-dark-blue);
+  font-weight: var(--font-weight-bold);;
+}
+
+.subscribe {
+  font-size: calc(var(--font-size) - 4px);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-light);
+  text-align: center;
+  color: var(--neutral-color-dark-blue);
+  margin: 40px 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-btn {
+  margin-bottom: 20px;
+}
+
+.email-btn,
+.submit-btn {
+  padding: 20px 50px;
+  border-radius: 45px;
+  border: 1px solid var(--neutral-color-gray);
+}
+
+.submit-btn {
+  background: var(--secondary-color-blue);
 }
