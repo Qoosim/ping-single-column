@@ -161,3 +161,53 @@
   text-align: center;
   margin-bottom: 30px;
 }
+
+@media screen and (min-width: 1024px) {
+  
+  .main-container {
+    max-width: 960px;
+    width: 84%;
+    margin: auto;
+  }
+
+  .title {
+    font-size: calc(var(--font-size) + 10px);
+  }
+
+  .sub-title {
+    font-size: calc(var(--font-size) + 22px);
+  }
+
+  .subscribe {
+    font-size: var(--font-size);
+  }
+
+  .form {
+    width: 86%;
+    margin: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 100px;
+  }
+  
+  .email-btn {
+    padding: 16px 190px;
+    margin-bottom: 0px;
+  }
+
+  .submit-btn {
+    padding: 16px 80px;
+    margin-bottom: 0px;
+  }
+
+  .email-btn::placeholder {
+    text-align: left;
+  }
+
+  footer {
+    margin-bottom: 50px;
+  }
+
+}
