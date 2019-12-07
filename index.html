@@ -35,9 +35,9 @@
     <form action="#" method="POST" class="form" id="form" novalidate>
       <div class="input-field">
           <input type="email" name="email" placeholder="Your email address..." class="email-btn" id="email-field">
-          <div class="email-message-error">
+          <div class="message">
               Please provide a valid email address
-            </div>
+          </div>
       </div>
       <input type="submit" value="Notify Me" class="submit-btn">
     </form>
@@ -68,24 +68,30 @@
   </footer>
 
   <script>
+
     let form = document.getElementById('form')
     let email = document.getElementById('email-field')
     let emailField = document.querySelector('.input-field')
+    let message = document.querySelector('.message');
+
     const validate = e => {
       let re = /\S+@\S+\.\S+/;
       let pattern = re.test(email.value)
 
       if (email.validity.valid && pattern) {
         emailField.classList.remove('email-error')
+        message.classList.remove('email-message-error');
 
       } else {
-        emailField.classList.add('email-error')
+        emailField.classList.add('email-error');
+        message.classList.add('email-message-error');
       }
       e.preventDefault()
     }
 
 
-    form.addEventListener('submit', e => validate(e))
+    form.addEventListener('submit', e => validate(e));
+
   </script>
 </body>
 
