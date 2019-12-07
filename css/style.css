@@ -162,6 +162,29 @@
   margin-bottom: 30px;
 }
 
+.email-error {
+  position: relative;
+}
+
+.email-error > input{
+  border-color: var(--secondary-color-light);
+  position: relative;
+}
+
+.email-message-error {
+  color: var(--secondary-color-light);
+  font-family: var(--font-family);
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  left: 0;
+  padding: 8px 34px;
+  position: absolute;
+  font-size: calc(var(--font-size) - 7px);
+  font-style: italic;
+}
+
+
 @media screen and (min-width: 1024px) {
   
   .main-container {
@@ -192,10 +215,9 @@
   }
   
   .email-btn {
-    width: 80%;
-    margin-right: 20px;
     padding: 16px 32px;
     margin-bottom: 0px;
+    width: 100%;
   }
 
   .submit-btn {
@@ -205,6 +227,11 @@
 
   footer {
     margin-bottom: 50px;
+  }
+
+  .email-error, .input-field {
+    width: 80%;
+    margin-right: 20px;
   }
 
 }

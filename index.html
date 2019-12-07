@@ -32,8 +32,13 @@
     <h2 class="sub-title"><span class="font-weight-light">We are launching</span><span class="soon"> soon!</span></h2>
     <p class="subscribe">Subscribe and get notified</p>
 
-    <form action="#" method="POST" class="form">
-      <input type="email" name="email" placeholder="Your email address..." class="email-btn">
+    <form action="#" method="POST" class="form" id="form" novalidate>
+      <div class="input-field">
+          <input type="email" name="email" placeholder="Your email address..." class="email-btn" id="email-field">
+          <div class="email-message-error">
+              Please provide a valid email address
+            </div>
+      </div>
       <input type="submit" value="Notify Me" class="submit-btn">
     </form>
 
@@ -61,6 +66,27 @@
       Coded by <a href="https://github.com/Qoosim">Qoosim</a> & <a href="https://github.com/SantiagoGuerra">Santiago</a>.
     </p>
   </footer>
+
+  <script>
+    let form = document.getElementById('form')
+    let email = document.getElementById('email-field')
+    let emailField = document.querySelector('.input-field')
+    const validate = e => {
+      let re = /\S+@\S+\.\S+/;
+      let pattern = re.test(email.value)
+
+      if (email.validity.valid && pattern) {
+        emailField.classList.remove('email-error')
+
+      } else {
+        emailField.classList.add('email-error')
+      }
+      e.preventDefault()
+    }
+
+
+    form.addEventListener('submit', e => validate(e))
+  </script>
 </body>
 
 </html>
