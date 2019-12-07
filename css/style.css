@@ -1,0 +1,260 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+/*Layout*/
+
+--mobile: 375px;
+--desktop: 1440px;
+
+/*colors*/
+
+--primary-color-blue: hsl(223, 87%, 63%);
+--secondary-color-blue: hsl(223, 100%, 88%);
+--secondary-color-light: hsl(354, 100%, 66%);
+--neutral-color-gray: hsl(0, 0%, 59%);
+--secondary-color-gray: hsl(0, 0%, 91%);
+--neutral-color-dark-blue: hsl(209, 33%, 12%);
+--light-color: #fff;
+
+
+/*Typography*/
+
+--font-size: 20px;
+--font-family: 'Libre Franklin', sans-serif;
+--font-weight-light: 300;
+--font-weight-semi-bold: 600;
+--font-weight-bold: 700;
+--font-weight-light: 200;
+--font-weight-regular: 400;
+}
+
+.main-container {
+  max-width: 360px;
+  margin: auto;
+}
+
+.title {
+  font-size: calc(var(--font-size) + 5px);
+  color: var(--neutral-color-dark-blue);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  margin: 40px 0;
+}
+
+.dot {
+  color: var(--primary-color-blue);
+}
+
+.sub-title {
+  font-size: calc(var(--font-size) + 3px);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--neutral-color-gray);
+  text-align: center;
+}
+
+.soon {
+  color: var(--neutral-color-dark-blue);
+  font-weight: var(--font-weight-bold);;
+}
+
+.subscribe {
+  font-size: calc(var(--font-size) - 6px);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-light);
+  text-align: center;
+  color: var(--neutral-color-dark-blue);
+  margin-top: 25px;
+}
+
+.font-weight-light {
+  font-weight: var(--font-weight-light);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+
+.email-btn,
+.submit-btn {
+  border: none;
+  padding: 16px 35px;
+  border-radius: 45px;
+  font-size: calc(var(--font-size) - 5px);
+  font-family: var(--font-family);
+  color: var(--neutral-color-gray);
+}
+.email-btn {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid var(--secondary-color-blue);
+}
+
+
+.email-btn::placeholder {
+  color: var(--secondary-color-blue);
+}
+
+.email-btn:focus {
+  outline: none;
+}
+
+.submit-btn {
+  background: var(--primary-color-blue);
+  color: var(--light-color);
+  box-shadow: 0px 4px 8px var(--secondary-color-blue);
+  margin-bottom: 80px;
+  transition: .3s all ease-in-out;
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+  box-shadow: 0px 8px 16px var(--secondary-color-blue);
+}
+
+
+.illustration {
+  width: 100%;
+}
+
+.social-container {
+  width: 200px;
+  display: flex;
+  margin: 150px auto 40px;
+  justify-content: space-evenly;
+ 
+}
+
+.social-item {
+  height: 45px;
+  width: 45px;
+  border: 2px solid var(--secondary-color-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: var(--primary-color-blue);
+}
+
+.text {
+  font-family: var(--font-family);
+  color: var(--neutral-color-gray);
+}
+
+.copy-text {
+  font-size: calc(var(--font-size) - 7px);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.email-error {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.email-error > input{
+  border-color: var(--secondary-color-light);
+  position: relative;
+}
+
+.message {
+  display: none;
+  text-align: center;
+}
+
+.email-message-error {
+  color: var(--secondary-color-light);
+  font-family: var(--font-family);
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 70%;
+  left: 0;
+  padding: 8px 34px;
+  position: absolute;
+  font-size: calc(var(--font-size) - 7px);
+  font-style: italic;
+}
+
+
+.input-field {
+  position: relative;
+}
+
+
+@media screen and (min-width: 1024px) {
+  
+  .main-container {
+    max-width: 960px;
+    width: 84%;
+    margin: auto;
+  }
+
+  .title {
+    font-size: calc(var(--font-size) + 10px);
+  }
+
+  .sub-title {
+    font-size: calc(var(--font-size) + 22px);
+  }
+
+  .subscribe {
+    font-size: var(--font-size);
+  }
+
+  .form {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-bottom: 100px;
+  }
+  
+  .email-btn {
+    padding: 16px 32px;
+    margin-bottom: 0px;
+    width: 100%;
+  }
+
+  .submit-btn {
+    padding: 16px 80px;
+    margin-bottom: 0px;
+  }
+
+  .email-error {
+    margin-bottom: 0;
+  }
+
+  .email-message-error {
+    top: 100%;
+    text-align: left;
+  }
+
+
+  .email-error, .input-field {
+    width: 80%;
+    margin-right: 20px;
+  }
+
+  footer {
+    margin-bottom: 50px;
+  }
+
+}
