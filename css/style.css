@@ -183,27 +183,24 @@
   }
 
   .form {
-    width: 86%;
+    width: 100%;
     margin: auto;
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     margin-top: 40px;
     margin-bottom: 100px;
   }
   
   .email-btn {
-    padding: 16px 190px;
+    width: 80%;
+    margin-right: 20px;
+    padding: 16px 32px;
     margin-bottom: 0px;
   }
 
   .submit-btn {
     padding: 16px 80px;
     margin-bottom: 0px;
-  }
-
-  .email-btn::placeholder {
-    text-align: left;
   }
 
   footer {
